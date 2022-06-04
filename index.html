@@ -1,0 +1,44 @@
+
+html>
+<head>
+  <title>интукод</title>
+</head>
+<body>
+  <div id="main">
+      <ul id="list">
+          <li>html</li>
+          <li>css</li>
+      </ul>
+  </div>
+    <div id="copyright">(c) INTOCODE</div>
+    <script> 
+    const postName = () => {
+       const hello = document.createElement("h1");
+       hello.textContent = "Работа с DOM"
+       document.body.prepend(hello)
+    };
+    const postLink = () => {
+      const element = document.getElementById("main")
+      element.insertAdjacentHTML("beforeend", "<a href ='https://learn.javascript.ru/modifying-document'>Ссылка на статью о DOM</a>")
+    }
+    const changeColor = (color) => {
+      document.body.style.backgroundColor = color
+    }
+    const addText = (text) => {
+      const element = document.getElementById("list")
+      element.insertAdjacentHTML("beforeend", `<li>${text}</li>`)
+    }
+    const deleteElement = () => {
+      const element = document.getElementById("copyright")
+      element.remove()
+    }
+   console.log(postName());
+   console.log(postLink());
+   console.log(changeColor("brown"));
+   console.log(addText('js'));
+   console.log(deleteElement());
+   
+
+    </script> 
+</body>
+</html>
